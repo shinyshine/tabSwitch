@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tab切换插件开发----原生js篇</title>
+	<link rel="stylesheet" type="text/css" href="./reset.css" />
+	<link rel="stylesheet" type="text/css" href="./index.css" />
+</head>
+<body>
+
+<div class="wrapper">
+	
+	<div class="container" id="tabsContainer">
+		
+		<ul class="tabs">
+			
+			<li data-id="0">第一个</li>
+			<li data-id="1">第一个</li>
+			<li data-id="2">第一个</li>
+			<li data-id="3">第一个</li>
+			<li data-id="4">第一个</li>
+		</ul>
+
+		<div class="content">
+			<div class="content-item"><img src="./images/1.jpg" /></div>
+			<div class="content-item"><img src="./images/2.jpg" /></div>
+			<div class="content-item"><img src="./images/3.jpg" /></div>
+			<div class="content-item"><img src="./images/4.jpg" /></div>
+			<div class="content-item"><img src="./images/5.jpg" /></div>
+		</div>
+	</div>
+</div>
+<script src="./index.js"></script>
+
+<script>
+	
+	// 相关参数
+	// 鼠标触发类型，切换效果，默认显示第几个，是否自动切换
+	var target = document.getElementById('tabsContainer');
+	var tab = new Tab({
+		container: "#tabsContainer",
+		trigger: "click",
+		effect: "fadeOut",
+		invoke: 1,
+		auto: false
+	});
+</script>
+</body>
+</html>
